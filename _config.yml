@@ -1,7 +1,14 @@
 ---
-header: Eva van der Weide
 title: Eva
 timezone: Europe/Amsterdam
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+header: Eva van der Weide
 short_title: Eva
 keywords: Polyism Studio Sem Postma Echo Sierra Studio Web Software Code Programming
   Hub
@@ -13,12 +20,12 @@ abbrv: ESS
 dribbble_username: 
 facebook_username: 
 flickr_username: 
-github_username:
+github_username: 
 instagram_username: 
 linkedin_username: 
 pinterest_username: 
 twitter_username: 
-youtube_username:
+youtube_username: 
 googleplus_username: 
 facebook:
   app_id: 
