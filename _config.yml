@@ -1,0 +1,53 @@
+---
+header: Eva van der Weide
+title: Eva
+timezone: Europe/Amsterdam
+short_title: Eva
+keywords: Polyism Studio Sem Postma Echo Sierra Studio Web Software Code Programming
+  Hub
+description: Web, app and tooling development and graphic design studio. View all
+  websites made by Echo Sierra Studio and contact us if your interested.
+theme_color: "#fb5353"
+baseurl: 
+abbrv: ESS
+dribbble_username: 
+facebook_username: 
+flickr_username: 
+github_username:
+instagram_username: 
+linkedin_username: 
+pinterest_username: 
+twitter_username: 
+youtube_username:
+googleplus_username: 
+facebook:
+  app_id: 
+  publisher: 
+  admins: 
+webmaster_verifications:
+  google: 
+  bing: 
+  alexa: 
+  yandex: 
+  baidu: 
+twitter:
+  username: 
+sass:
+  style: compressed
+  sass_dir: _sass
+plugins:
+- jekyll-feed
+- jekyll-sitemap
+markdown: kramdown
+theme: minima
+author:
+  name: Sem Postma
+  from: Oosterhout, Noord Brabant, The Netherlands
+  role: Developer
+  email: sem.postma@gmail.com
+designer:
+  name: Sem Postma
+  from: Oosterhout, Noord Brabant, The Netherlands
+  role: Developer
+  email: sem.postma@gmail.com
+google_analytics: 
