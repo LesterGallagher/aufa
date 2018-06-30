@@ -1,0 +1,77 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.rel {
+    position: relative;
+}
+
+.abs {
+    position: absolute;
+}
+
+.lazyload {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0;
+    transition: all 600ms ease-out;
+}
+
+.lazyload.loaded {
+    opacity: 1;
+}
+
+.clear {
+    clear: both;
+}
+
+h1 {
+    margin: 0.667em 0;
+}
+
+html {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font: 14px 'Times New Roman', arial;
+    color: #000;
+}
+
+body {
+    border: 0;
+    margin: 0 auto;
+    width: 1280px;
+    max-width: 100%;
+    padding: 0 0 0 70px;
+}
+
+nav {
+    width: 200px;
+    float: left;
+}
+
+main {
+    width: calc(100% - 201px);
+    float: right;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    text-transform: uppercase;
+}
+
+.site-header {
+    font-size: 5rem;
+}

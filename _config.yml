@@ -10,6 +10,16 @@ collections:
     output: true
 header: Eva van der Weide
 short_title: Eva
+defaults: 
+  - 
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      image:
+      width: 100
+      height: 100
+      image: ""
 keywords: Polyism Studio Sem Postma Echo Sierra Studio Web Software Code Programming
   Hub
 description: Web, app and tooling development and graphic design studio. View all
