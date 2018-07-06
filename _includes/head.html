@@ -12,15 +12,7 @@
   <meta name="keywords" content="{{ site.keywords }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:description" content="{{ site.description }}">
-  <link rel="canonical" href="{{ page.url }}">
-  <meta property="og:url" content="{{ page.url }}">
-  <meta property="og:site_name" content="{{ site.title }}">
-  <script type="application/ld+json">
-  {"name":"{{ site.title }}","description":"{{ site.description }}","author":{"@type":"Person","name":"{{ site.author }}"},"@type":"WebSite","url":"http://localhost:4000/","headline":"{{ page.title }}","@context":"http://schema.org"}</script>
-
-  <style>{% include /assets/css/style.css %}</style>
+  <style>{% include assets/css/min.css filename="style.css" %}</style>
   {% capture style %}{% include assets/css/style.css %}{% endcapture %}
   {% include lazycss.html href="/assets/css/style.css" %}
   

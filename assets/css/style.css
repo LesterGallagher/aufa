@@ -1,8 +1,4 @@
 
-nav {
-    font-weight: bold;
-}
-
 nav li {
     position: relative;
 }
@@ -20,3 +16,6 @@ nav li.mt {
 }
 
 
+.copy-right {
+    color: #ccc;
+}

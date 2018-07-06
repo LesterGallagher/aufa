@@ -3,5 +3,5 @@
     <img class="lazyload" data-src="{{ include.image.image | absolute_url }}" {% if include.image.alt %}alt="{{ include.url }}"{% endif %} {% if include.image.title %}alt="{{ include.image.title }}"{% endif %}>
 </div>
 <noscript>
-    <img src="{{ include.image.image | absolute_url }}" {% if include.image.alt %}alt="{{ include.url }}"{% endif %} {% if include.image.title %}title="{{ include.image.title }}"{% endif %}>
+    <img class="responsive" src="{{ include.image.image | absolute_url }}" {% if include.image.alt %}alt="{{ include.url }}"{% endif %} {% if include.image.title %}title="{{ include.image.title }}"{% endif %}>
 </noscript>

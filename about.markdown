@@ -1,5 +1,7 @@
 ---
 title: About
 date: 2018-06-30 20:15:00 +02:00
+layout: page
+permalink: /about/
 ---
 

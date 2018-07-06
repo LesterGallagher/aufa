@@ -1,3 +1,6 @@
+---
+---
+
 (function () {
     // lazyload
     window.addEventListener("load", function() {
@@ -6,7 +9,17 @@
                 for (var c = b.length - 1; 0 <= c; c--) {
                     var d = b[c];
                     if (d.getBoundingClientRect().top <= window.innerHeight && 0 <= d.getBoundingClientRect().bottom) {
-                        (d.setAttribute("src", d.getAttribute("data-src")), d.classList.add("loaded"), b.splice(c, 1))
+                        if (d.tagName === "IMG") {
+                            var img = new Image();
+                            img.onload = function() { d.src = img.src, d.classList.add("loaded"); };
+                            img.src = d.getAttribute("data-src");
+                            b.splice(c, 1);
+                        } else {
+                            var vid = document.createElement("video");
+                            vid.onload = function() { d.src = vid.src, d.classList.add("loaded"); }
+                            vid.src = d.getAttribute("data-src");
+                            b.splice(c, 1);
+                        }
                     } 
                 }
                 0 === b.length && (document.removeEventListener("scroll", a), window.removeEventListener("resize", a), window.removeEventListener("orientationchange", a));
@@ -26,7 +39,7 @@
     for (g = 0; g < p.length; g++) {
         "style" === p[g].getAttribute("as") && (p[g].rel = "stylesheet");
         "script" === p[g].getAttribute("as") && (document.head.appendChild(
-            document.createElement('script')).setAttribute('src', p[g].getAttribute('href')))
+            document.createElement("script")).setAttribute("src", p[g].getAttribute("href")))
     }
 
     // smooth scroll
@@ -64,4 +77,9 @@
         c = "undefined" === typeof c ? 500 : c;
         f()
     };
-})()
+
+    {% if jekyll.environment == "production" %}
+    if (navigator.serviceWorker)
+        navigator.serviceWorker.register("{{ "/sw.js" | absolute_url }}", { scope: "{{ "/" | absolute_url }}" });
+    {% endif %}
+})();

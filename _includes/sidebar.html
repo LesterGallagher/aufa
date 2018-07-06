@@ -1,14 +1,26 @@
 <nav class="sidebar">
     <ul id="nav-items">
-        {% for item in site.pages %}
-            {% if item.layout == "page" %}
-                {% assign classes = [] %}
-                {% if item.title | downcase | contains: "contact" %}{% classes | concat: "mt" %}{% endif %}
-                {% if page.url == item.url %}{% classes | concat: "active" %}{% endif %}
-                <li>
-                    <a{% if classes.size != 0 %} class="{{ classes | join: "" }}"{% endif %} href="{{ item.url | asbolute_url }}">{{ page.title }}</a>
-                </li>
-            {% endif %}
-        {% endfor %}
+        <li{% if page.url == "/" %} class="active"{% endif %}>
+            <a href="{{ "/" | asbolute_url }}">Home</a> 
+        </li>
+        <li{% if page.url == "/fashion-design-portfolio/" %} class="active"{% endif %}>
+            <a href="{{ "/fashion-design-portfolio/" | asbolute_url }}">Fashion Design Portfolio</a>
+        </li>
+        <li{% if page.url == "/cinematography/" %} class="active"{% endif %}>
+            <a href="{{ "/cinematography/" | asbolute_url }}">Cinematography</a>
+        </li>
+        <li{% if page.url == "/photography/" %} class="active"{% endif %}>
+            <a href="{{ "/photography/" | asbolute_url }}">Photography</a>
+        </li>
+        <li{% if page.url == "/art/" %} class="active"{% endif %}>
+            <a href="{{ "/art/" | asbolute_url }}">Art</a>
+        </li>
+        <li class="mt-20"></li>
+        <li{% if page.url == "/contact/" %} class="active"{% endif %}>
+            <a href="{{ "/contact/" | asbolute_url }}">Contact</a>
+        </li>
+        <li {% if page.url == "/about/" %} class="active"{% endif %}>
+            <a href="{{ "/about/" | asbolute_url }}">About</a>
+        </li>
     </ul>
 </nav>

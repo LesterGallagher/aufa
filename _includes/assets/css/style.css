@@ -47,23 +47,27 @@ body {
     margin: 0 auto;
     width: 1280px;
     max-width: 100%;
-    padding: 0 0 0 70px;
+    padding: 0 10px 0 70px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 nav {
-    width: 200px;
+    width: 220px;
     float: left;
+    font-weight: bold;
 }
 
 main {
-    width: calc(100% - 201px);
+    width: calc(100% - 221px);
     float: right;
 }
 
 ul {
     margin: 0;
     list-style: none;
-    padding-left: 0;
+    padding-left: 10px;
 }
 
 a {
@@ -72,6 +76,41 @@ a {
     text-transform: uppercase;
 }
 
+footer {
+    position: absolute;
+    left: 100px;
+    bottom: 0;
+    right: 0;
+}
+
 .site-header {
     font-size: 5rem;
+    float: left;
 }
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+    main {
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+
+.responsive {
+    max-width: 100%;
+}
+
+.col-3 {
+    float: left;
+}
+
+.col-3 {
+    width: 24.99%;
+}
+

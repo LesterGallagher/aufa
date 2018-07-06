@@ -1,8 +1,10 @@
 ---
 ---
 
+{% if jekyll.environment == 'production' and site.google_analytics %}
 var DYNAMIC_CACHE = 'dynamic-cache-v1';
-var STATIC_CACHE = 'static-cache-v1'
+var STATIC_CACHE = 'static-cache-v1';
+
 
 // listen for outgoing network request
 self.addEventListener('fetch', function (event) {
@@ -42,20 +44,16 @@ self.addEventListener('install', function (event) {
         caches.open(STATIC_CACHE).then(function (cache) {
             return cache.addAll(
                 [
-                    "{{ "/" | absolute_url }}",
-                    "{{ "/assets/css/main.css" | absolute_url }}",
-                    "{{ "/assets/css/critical.css" | absolute_url }}",
-                    "{{ "/assets/img/logo.png" | absolute_url }}",
-                    "https://cdn.polyfill.io/v2/polyfill.min.js",
-                    "{{ "/assets/js/main.js" | absolute_url }}",
-                    "{{ "/assets/minima-social-icons.svg" | absolute_url }}",
-                    "{{ "/assets/img/home-images/portfolio.jpg" | absolute_url }}",
-                    "{{ "/uploads/my_logo_512.png" | absolute_url }}",
-                    "{{ "/about/" | absolute_url }}",
-                    "{{ "/blog/" | absolute_url }}",
-                    "{{ "/contact/" | absolute_url }}"
+                    "{{ " / assets / css / style.css" | absolute_url }}",
+                    "{{ " / assets / js / main.js" | absolute_url }}",
+                    {% for page in site.pages %}{% if page.layout == "page" %}"{{ page.url }}",
+    {% endif %}{% endfor %}
+    {% assign collection = site.collections | where: 'label', 'uploads' | first %}
+    {% for file in collection.files %}"{{ " / uploads / " | append: file.name | absolute_url }}",
+        {% endfor %}
                 ]
             );
         })
     );
 });
+{% endif %}

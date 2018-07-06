@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-{% capture html %}<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<!DOCTYPE html>{% capture html %}<html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {% include head.html %}
   <body>
       <h1 class="site-header">{{ site.header }}</h1>
+      <div class="clear"></div>
     	{% include sidebar.html %}
       {{ content }}
     {% include footer.html %}
   </body>
 </html>{% endcapture %}{% capture newline %}
-{% endcapture %}
-{% assign html = html | split: newline %}{% for line in html %}{{ line | lstrip }}{% endfor %}
+{% endcapture %}{% assign html = html | split: newline %}{% for line in html %}{{ line | lstrip }}{% endfor %}
