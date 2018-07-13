@@ -12,7 +12,7 @@ layout: page
 
 {% for section in page.sections %}
 <section>
-    {% include lazyvid.html video=section %}
+    
     {{ section.content }}
 </section>
 {% endfor %}

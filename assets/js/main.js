@@ -14,11 +14,6 @@
                             img.onload = function() { d.src = img.src, d.classList.add("loaded"); };
                             img.src = d.getAttribute("data-src");
                             b.splice(c, 1);
-                        } else {
-                            var vid = document.createElement("video");
-                            vid.onload = function() { d.src = vid.src, d.classList.add("loaded"); }
-                            vid.src = d.getAttribute("data-src");
-                            b.splice(c, 1);
                         }
                     } 
                 }
