@@ -1,9 +1,5 @@
-
 <div class="rel" style="padding-top: {{ include.video.height | times: 100.0 | divided_by: include.video.width }}%" controls>
-    <video class="lazyload" data-src="{{ include.video.file | absolute_url }}" >
+    <video controls>
+        <source src="{{ include.video.file | absolute_url }}" type="video/mp4">
     </video>
 </div>
-<noscript>
-    <video class="responsive" src="{{ include.video.file | absolute_url }}" perload="none" controls>
-    </video>
-</noscript>

@@ -15,7 +15,22 @@ nav li.mt {
     margin-top: 30px;
 }
 
-
 .copy-right {
     color: #ccc;
+}
+
+button {
+    font-family: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 200ms ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+input, textarea {
+    font-family: inherit;
 }
