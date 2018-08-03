@@ -4,15 +4,14 @@ date: 2018-06-30 20:12:00 +02:00
 permalink: "/fashion-design-portfolio/"
 layout: page
 sections:
-  - description: "# adfasds"
-    artimages:
-    - image: "/uploads/IMG_0682.JPG"
-      width: 100
-      height: 100
-    - width: 100
-      height: 100
-      image: 
-layout: page
+- description: "# adfasds"
+  artimages:
+  - image: "/uploads/IMG_0682.JPG"
+    width: 100
+    height: 100
+  - width: 100
+    height: 100
+    image: 
 ---
 
 {% for section in page.sections %}

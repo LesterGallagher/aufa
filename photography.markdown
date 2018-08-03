@@ -10,7 +10,6 @@ artimages:
 - width: 100
   height: 100
   image: 
-layout: page
 ---
 
 {% for image in page.artimages %}
