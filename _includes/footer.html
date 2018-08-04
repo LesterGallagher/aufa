@@ -1,4 +1,11 @@
 <footer>
     <p class="copy-right">{{ site.copyright }}</p>
 </footer>
+{% if page.is-image-gallery %}
+<div id="imgmodal" class="modal" role="dialog" aria-expanded="true" style="display: none;">
+    <span class="close">×</span>
+    <figure class="modal-content" id="modal-img" role="figure" aria-describedby="caption"></figure>
+    <div id="modal-caption" role="contentinfo"></div>
+</div>
+{% endif %}
 <script src="{{ "/assets/js/main.js" | absolute_url }}"></script>

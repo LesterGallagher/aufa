@@ -1,6 +1,6 @@
 
 <div class="rel" style="padding-top: {{ include.image.height | times: 100.0 | divided_by: include.image.width }}%">
-    <img class="lazyload" data-src="{{ include.image.image | absolute_url }}" {% if include.image.alt %}alt="{{ include.url }}"{% endif %} {% if include.image.title %}alt="{{ include.image.title }}"{% endif %}>
+    <img class="lazyload {{ include.classes }}" data-src="{{ include.image.image | absolute_url }}" {% if include.image.alt %}alt="{{ include.url }}"{% endif %} {% if include.image.title %}alt="{{ include.image.title }}"{% endif %}>
 </div>
 <noscript>
     <img class="responsive" src="{{ include.image.image | absolute_url }}" {% if include.image.alt %}alt="{{ include.url }}"{% endif %} {% if include.image.title %}title="{{ include.image.title }}"{% endif %}>

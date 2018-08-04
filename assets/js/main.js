@@ -73,8 +73,23 @@
         f()
     };
 
-    {% if jekyll.environment == "production" %}
+    var a = document.getElementById('imgmodal');
+    if (null !== a) {
+        var b = document.getElementById('modal-img')
+          , c = document.getElementById('modal-caption');
+        document.addEventListener('click', function(d) {
+            d.target.classList.contains('modal-image') && (a.style.display = 'block',
+            a.setAttribute('aria-expanded', 'true'),
+            b.setAttribute('style', 'background-image: url(' + d.target.src + ')'),
+            c.innerHTML = d.target.alt)
+        });
+        var d = a.getElementsByClassName('close')[0];
+        d.addEventListener('click', function() {
+            a.style.display = 'none',
+            a.setAttribute('aria-expanded', 'false')
+        });
+    }
+
     if (navigator.serviceWorker)
         navigator.serviceWorker.register("{{ "/sw.js" | absolute_url }}", { scope: "{{ "/" | absolute_url }}" });
-    {% endif %}
 })();

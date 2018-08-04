@@ -3,6 +3,7 @@ title: Fashion Design Portfolio
 date: 2018-06-30 20:12:00 +02:00
 permalink: "/fashion-design-portfolio/"
 layout: page
+is-image-gallery: true
 sections:
   - description: "# adfasds"
     artimages:
@@ -17,9 +18,9 @@ layout: page
 
 {% for section in page.sections %}
 {{ section.description | markdownify }}
-{% for image in section %}
+{% for image in section.artimages %}
 <div class="col-3">
-{% include lazyload.html image=image %}
+{% include lazyload.html classes="modal-image" image=image %}
 </div>
 {% endfor %}
 {% endfor %}
