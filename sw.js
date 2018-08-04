@@ -1,5 +1,6 @@
 ---
 ---
+
 var STATIC_CACHE = 'static-cache-v1'
 self.addEventListener('fetch', function (event) {
     event.respondWith(caches.open(STATIC_CACHE)
