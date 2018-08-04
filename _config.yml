@@ -28,6 +28,8 @@ description: Web, app and tooling development and graphic design studio. View al
 theme_color: "#fb5353"
 baseurl: 
 abbrv: ESS
+url: https://esstudio.site/aufa
+enforce_ssl: esstudio.site/aufa
 dribbble_username: 
 facebook_username: 
 flickr_username: 
