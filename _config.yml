@@ -26,9 +26,8 @@ keywords: Polyism Studio Sem Postma Echo Sierra Studio Web Software Code Program
 description: Web, app and tooling development and graphic design studio. View all
   websites made by Echo Sierra Studio and contact us if your interested.
 theme_color: "#fb5353"
-baseurl: 
 abbrv: ESS
-url: https://esstudio.site/aufa
+url: https://esstudio.site
 enforce_ssl: esstudio.site/aufa
 dribbble_username: 
 facebook_username: 
