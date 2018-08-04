@@ -1,26 +1,26 @@
 <nav class="sidebar">
     <ul id="nav-items">
         <li{% if page.url == "/" %} class="active"{% endif %}>
-            <a href="{{ "/" | asbolute_url }}">Home</a> 
+            <a href="{{ "/" | absolute_url }}">Home</a> 
         </li>
         <li{% if page.url == "/fashion-design-portfolio/" %} class="active"{% endif %}>
-            <a href="{{ "/fashion-design-portfolio/" | asbolute_url }}">Fashion Design Portfolio</a>
+            <a href="{{ "/fashion-design-portfolio/" | absolute_url }}">Fashion Design Portfolio</a>
         </li>
         <li{% if page.url == "/cinematography/" %} class="active"{% endif %}>
-            <a href="{{ "/cinematography/" | asbolute_url }}">Cinematography</a>
+            <a href="{{ "/cinematography/" | absolute_url }}">Cinematography</a>
         </li>
         <li{% if page.url == "/photography/" %} class="active"{% endif %}>
-            <a href="{{ "/photography/" | asbolute_url }}">Photography</a>
+            <a href="{{ "/photography/" | absolute_url }}">Photography</a>
         </li>
         <li{% if page.url == "/art/" %} class="active"{% endif %}>
-            <a href="{{ "/art/" | asbolute_url }}">Art</a>
+            <a href="{{ "/art/" | absolute_url }}">Art</a>
         </li>
         <li class="mt-20"></li>
         <li{% if page.url == "/contact/" %} class="active"{% endif %}>
-            <a href="{{ "/contact/" | asbolute_url }}">Contact</a>
+            <a href="{{ "/contact/" | absolute_url }}">Contact</a>
         </li>
         <li {% if page.url == "/about/" %} class="active"{% endif %}>
-            <a href="{{ "/about/" | asbolute_url }}">About</a>
+            <a href="{{ "/about/" | absolute_url }}">About</a>
         </li>
     </ul>
 </nav>
